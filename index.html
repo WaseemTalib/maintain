@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dice Duel</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero panel">
+        <p class="eyebrow">Simple game of dice</p>
+        <h1>Dice Duel</h1>
+        <p class="hero-copy">
+          Roll against the house, win the round with the higher die, and reach
+          five points before the computer does.
+        </p>
+      </header>
+
+      <main class="game-grid">
+        <section class="board panel">
+          <div class="scoreboard" aria-label="Current score">
+            <article class="score-card">
+              <span class="score-label">Player</span>
+              <strong id="player-score">0</strong>
+            </article>
+            <article class="score-card">
+              <span class="score-label">Computer</span>
+              <strong id="computer-score">0</strong>
+            </article>
+            <article class="score-card">
+              <span class="score-label">Rounds</span>
+              <strong id="round-count">0</strong>
+            </article>
+          </div>
+
+          <div class="arena">
+            <section class="contestant">
+              <p class="contestant-name">Player Roll</p>
+              <div class="die-card" id="player-card">
+                <div class="die" id="player-die" aria-label="Player die">
+                  <span class="pip"></span>
+                  <span class="pip"></span>
+                  <span class="pip"></span>
+                  <span class="pip"></span>
+                  <span class="pip"></span>
+                  <span class="pip"></span>
+                  <span class="pip"></span>
+                  <span class="pip"></span>
+                  <span class="pip"></span>
+                </div>
+                <span class="die-value" id="player-value">1</span>
+              </div>
+            </section>
+
+            <div class="versus-pill">VS</div>
+
+            <section class="contestant">
+              <p class="contestant-name">House Roll</p>
+              <div class="die-card" id="computer-card">
+                <div class="die" id="computer-die" aria-label="Computer die">
+                  <span class="pip"></span>
+                  <span class="pip"></span>
+                  <span class="pip"></span>
+                  <span class="pip"></span>
+                  <span class="pip"></span>
+                  <span class="pip"></span>
+                  <span class="pip"></span>
+                  <span class="pip"></span>
+                  <span class="pip"></span>
+                </div>
+                <span class="die-value" id="computer-value">1</span>
+              </div>
+            </section>
+          </div>
+
+          <div class="controls">
+            <button id="roll-button" class="primary-button">Roll the Dice</button>
+            <button id="reset-button" class="secondary-button">Reset Match</button>
+          </div>
+
+          <p id="status" class="status" aria-live="polite">
+            Ready when you are. First to five points wins the match.
+          </p>
+        </section>
+
+        <aside class="history panel">
+          <div class="history-heading">
+            <h2>Round Log</h2>
+            <p>Latest rounds stay pinned here so the match feels easy to follow.</p>
+          </div>
+          <ol id="history-list" class="history-list">
+            <li class="empty-state">Your latest rolls will appear here.</li>
+          </ol>
+        </aside>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

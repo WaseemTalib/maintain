@@ -4,21 +4,38 @@ Simple game of dice.
 
 ## Overview
 
-`diegame` is a lightweight dice game project that starts with a minimal setup and can grow into a small interactive game.
+`diegame` is a lightweight browser game where the player rolls against the
+house. Every round compares one die against another, and the first side to
+reach five points wins the match.
 
-## Goals
+## Current Features
 
-- Build a simple and fun dice-rolling game
-- Keep the project easy to understand
-- Add features gradually over time
+- Playable browser-based dice game
+- Player versus computer scoring
+- Round counter and recent round log
+- Reset button to start a fresh match
+- Responsive layout for desktop and mobile screens
 
-## Planned Features
+## How To Run
 
-- Roll one or more dice
-- Show random outcomes
-- Track score or rounds
-- Add a simple win condition
+1. Open `index.html` in your browser.
+2. Click **Roll the Dice** to play a round.
+3. Use **Reset Match** to clear the score and start over.
 
-## Status
+## Project Files
 
-Project initialized with documentation first.
+- `index.html` contains the game layout
+- `styles.css` contains the visual design and responsive styles
+- `script.js` contains the dice logic, score tracking, and round history
+
+## Branch Layout
+
+- `main` holds the stable project history
+- `develop` is ready for integration work
+- `feature/dice-rules` is used for active gameplay changes
+
+## Next Ideas
+
+- Add difficulty settings
+- Add sound or celebration effects
+- Track best-of series results
